@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - DietLina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DietLina</div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li id="book"><a href="book.html">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="booking-main">
+        <div class="container">
+            <h1>Book Your Appointment</h1>
+
+            <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL000001hQBa" method="POST" onsubmit="return handleSubmit(event)">
+            
+                <input type=hidden name="oid" value="00DgL000001hQBa">
+                <input type=hidden name="retURL" value="http://127.0.0.1:5500/thank-you.html">
+                
+                
+                <label for="salutation">Salutation</label>
+                <select  id="salutation" name="salutation">
+                    <option value="">--None--</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Mrs.">Mrs.</option>
+                </select><br>
+                
+                <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+                
+                <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+                
+                <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+                
+                <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+                
+                <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+                
+                <label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
+                
+                <label for="00NgL00000nTTSD">Age</label>
+                <input  id="00NgL00000nTTSD" name="00NgL00000nTTSD" size="20" type="text" /><br>
+                
+                <label for="00NgL00000nTXh7">Motive</label>
+                <textarea  id="00NgL00000nTXh7" name="00NgL00000nTXh7" rows="3" type="text" wrap="soft"></textarea><br>
+                
+                <input type="submit" name="submit">
+            
+            </form>
+    
+    
+    
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DietLina. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scripts/book.js"></script>
+    <script>
+        function handleSubmit(event) {
+            // Allow the form to submit to Salesforce
+            // The retURL will handle the redirect to thank-you.html
+            return true;
+        }
+    </script>
+</body>
+</html> 
